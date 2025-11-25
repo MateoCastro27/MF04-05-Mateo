@@ -1,0 +1,21 @@
+package dev.app.rentingcartestvaadin.controller;
+
+import com.vaadin.flow.server.auth.AnonymousAllowed;
+import com.vaadin.hilla.Endpoint;
+import dev.app.rentingcartestvaadin.model.Booking;
+import dev.app.rentingcartestvaadin.service.BookingService;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
+
+@Endpoint
+@AnonymousAllowed
+public class BookingEndpoint {
+
+    @Autowired
+    BookingService bookingService;
+
+    public List<Booking> getAllBookings() {
+        return (List<Booking>) bookingService.findAll();
+    }
+}
