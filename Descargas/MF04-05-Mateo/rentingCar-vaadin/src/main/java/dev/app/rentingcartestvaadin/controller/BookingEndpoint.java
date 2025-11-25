@@ -1,11 +1,11 @@
 package dev.app.rentingcartestvaadin.controller;
 
+
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import com.vaadin.hilla.Endpoint;
 import dev.app.rentingcartestvaadin.model.Booking;
 import dev.app.rentingcartestvaadin.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import java.util.List;
 
 @Endpoint
@@ -13,7 +13,7 @@ import java.util.List;
 public class BookingEndpoint {
 
     @Autowired
-    BookingService bookingService;
+    private BookingService bookingService;
 
     public List<Booking> getAllBookings() {
         return (List<Booking>) bookingService.findAll();

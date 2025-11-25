@@ -1,7 +1,14 @@
 package dev.app.rentingCar_boot.utils;
 
+import dev.app.rentingCar_boot.model.Booking;
+import dev.app.rentingCar_boot.model.Car;
+import dev.app.rentingCar_boot.model.Client;
+import dev.app.rentingCar_boot.repository.BookingRepository;
+import dev.app.rentingCar_boot.repository.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.sql.Date;
 
 @Component
 public class PopulateAllTables {
