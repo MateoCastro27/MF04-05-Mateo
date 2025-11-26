@@ -25,7 +25,9 @@ public class PopulateAllTables {
     @Autowired
     private PopulateDrivingCourse populateDrivingCourse;
 
-    public String populateAllTables(int qty) {
+    public String populateAllTables(int qty)
+
+         {
 
         // let s populate cars first
         PopulateStatus populateCarStatus = populateCar.populateCar(qty);

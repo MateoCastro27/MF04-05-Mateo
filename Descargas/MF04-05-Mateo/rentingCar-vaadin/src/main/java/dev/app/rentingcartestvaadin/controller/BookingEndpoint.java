@@ -1,21 +1,21 @@
 package dev.app.rentingcartestvaadin.controller;
 
-
-import com.vaadin.flow.server.auth.AnonymousAllowed;
-import com.vaadin.hilla.Endpoint;
 import dev.app.rentingcartestvaadin.model.Booking;
-import dev.app.rentingcartestvaadin.service.BookingService;
+import dev.app.rentingcartestvaadin.repository.BookingRepository;
+import com.vaadin.hilla.Endpoint;
+import com.vaadin.flow.server.auth.AnonymousAllowed;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.List;
 
 @Endpoint
-@AnonymousAllowed
+@AnonymousAllowed // permite que el frontend llame al spring boot sin login
 public class BookingEndpoint {
 
     @Autowired
-    private BookingService bookingService;
+    private BookingRepository bookingRepository;
 
     public List<Booking> getAllBookings() {
-        return (List<Booking>) bookingService.findAll();
+        return (List<Booking>) bookingRepository.findAll();
     }
 }

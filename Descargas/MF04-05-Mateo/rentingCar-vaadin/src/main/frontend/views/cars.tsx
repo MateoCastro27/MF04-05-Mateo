@@ -59,6 +59,14 @@ export default function CarsView() {
               {car.inssuranceCia && (
                 <p><strong>Insurance:</strong> {car.inssuranceCia.name}</p>
               )}
+              {car.availabilityRanges && (
+                <div>
+                  <strong>Availability:</strong>
+                  <pre className="text-xs mt-1 bg-gray-100 p-2 rounded">
+                    {car.availabilityRanges}
+                  </pre>
+                </div>
+              )}
             </div>
           </div>
         ))}
