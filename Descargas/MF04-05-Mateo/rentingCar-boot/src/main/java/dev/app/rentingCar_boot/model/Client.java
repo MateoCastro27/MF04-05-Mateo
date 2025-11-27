@@ -37,6 +37,9 @@ public class Client {
         this.id = GenerateUUID.generateFourDigitUuid();
     }
 
+    public Client(String mateo, String castro, String mail) {
+    }
+
     public String getId() {
         return id;
     }

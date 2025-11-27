@@ -29,6 +29,7 @@ public class PopulateAllTables {
 
          {
 
+
         // let s populate cars first
         PopulateStatus populateCarStatus = populateCar.populateCar(qty);
         System.out.println("\nPopulate Car operations: " + populateCarStatus.getQty() +
@@ -58,6 +59,7 @@ public class PopulateAllTables {
         System.out.println("\nPopulate DrivingCourse operations: " + populateDrivingCourseStatus.getQty() +
                 " \n" + populateDrivingCourseStatus.getMessage());
         } else return "Populate Booking operations failed";
+
 
         if (!populateDrivingCourseStatus.isStatus()) return "Populate DrivingCourse operations failed";
 
